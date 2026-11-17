@@ -18,8 +18,8 @@ export const CONFIG = {
 
   // --- PIX (obrigatório) ---
   pix: {
-    chave: '+55 11 99969-2929',
-    tipo: 'telefone',                // 'aleatoria' | 'email' | 'telefone' | 'cpf' | 'cnpj'
+    chave: '024078149-08',
+    tipo: 'cpf',                     // 'aleatoria' | 'email' | 'telefone' | 'cpf' | 'cnpj'
     nomeTitular: 'NOME_DO_TITULAR',  // nome completo da conta que recebe
     cidadeTitular: 'CIDADE_DO_TITULAR',
     descricao: '',                   // opcional; deixe vazio para máxima compatibilidade
@@ -33,5 +33,5 @@ export const CONFIG = {
   valorLivre: { minimo: 10, maximo: 50000 },   // em reais
   pagamentoExterior: '',             // texto livre para quem está fora do Brasil; vazio = oculto
   credito: '',                       // ex.: 'Feito com 💛 pelo Roni' – vazio = oculto
-  siteUrl: 'https://USUARIO.github.io/REPOSITORIO/',
+  siteUrl: 'https://ronikriger.github.io/lista-casamento/',
 };
