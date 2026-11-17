@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    WhatsApp and other crawlers do not run JavaScript. Replace the UPPER_SNAKE
+    placeholders below by hand (names, absolute og:image and og:url). They are
+    listed again in the README. Keep robots noindex: this is a private family page.
+  -->
+  <title>Lista de presentes · Patricia &amp; Marcio</title>
+  <meta name="description" content="Escolha um presente para Patricia e Marcio e envie por PIX. Obrigado pelo carinho!">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FBF8F3">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Lista de presentes · Patricia &amp; Marcio">
+  <meta property="og:description" content="Escolha um presente para os noivos e envie por PIX. 💛">
+  <meta property="og:image" content="https://USUARIO.github.io/REPOSITORIO/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://USUARIO.github.io/REPOSITORIO/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="aviso-dev" class="aviso-dev" role="status" hidden data-t="aviso"></div>
+  <a class="pular" href="#conteudo" data-t="pular">Ir para o conteúdo</a>
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Início">
+      <span id="marca-a"></span><span class="amp">&amp;</span><span id="marca-b"></span>
+    </a>
+    <button type="button" id="btn-menu" class="btn-menu" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" data-t="nav.menu">Menu</button>
+    <nav id="menu-principal" class="menu" aria-label="Seções">
+      <a href="#inicio" data-t="nav.inicio">Início</a>
+      <a href="#como-funciona" data-t="nav.como">Como funciona</a>
+      <a href="#presentes" data-t="nav.presentes">Presentes</a>
+      <a href="#recados" data-t="nav.recados">Recados</a>
+      <a href="#duvidas" data-t="nav.duvidas">Dúvidas</a>
+    </nav>
+    <button type="button" id="btn-sacola" class="btn-sacola">
+      <span data-t="nav.sacola">Sacola</span>
+      <span id="selo-sacola" class="selo" hidden>0</span>
+    </button>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="secao">
+      <div class="miolo hero">
+        <div class="hero-texto">
+          <p class="kicker" data-t="hero.kicker">Vamos nos casar!</p>
+          <h1><span id="nome-noiva"></span> <span class="amp">&amp;</span> <span id="nome-noivo"></span></h1>
+          <p id="data-casamento" class="data-casamento"></p>
+          <p id="contagem-regressiva" class="contagem"></p>
+          <div class="ctas">
+            <a class="btn btn-primario" href="#presentes" data-t="hero.ctaLista">Ver lista de presentes</a>
+            <a class="btn btn-secundario" href="#como-funciona" data-t="hero.ctaComo">Como funciona</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="monograma" id="monograma">
+            <svg class="guirlanda" viewBox="0 0 320 320" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.25" transform="translate(160 160)">
+                <circle r="96"></circle>
+                <g transform="rotate(0)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(30)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(60)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(90)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(120)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(150)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(180)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(210)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(240)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(270)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(300)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+                <g transform="rotate(330)"><ellipse cx="0" cy="-124" rx="11" ry="24"></ellipse></g>
+              </g>
+            </svg>
+            <p class="letras"><span id="inicial-noiva"></span> <span class="amp">&amp;</span> <span id="inicial-noivo"></span></p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="boas-vindas" class="secao">
+      <div class="miolo prosa convite" id="texto-boas-vindas"></div>
+    </section>
+
+    <section id="grande-dia" class="secao" hidden>
+      <div class="miolo estreito">
+        <div class="divisor" aria-hidden="true">
+          <svg viewBox="0 0 140 28"><g fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"><path d="M8 14h124"/><path d="M70 14c-8-10-22-10-24-2 8 1 16 1 24 2-8 1-16 1-24 2 2 8 16 8 24-2 8-10 22-10 24-2-8 1-16 1-24 2 8 1 16 1 24-2-2 8-16 8-24 2z"/></g></svg>
+        </div>
+        <h2 data-t="grandeDia.titulo">O grande dia</h2>
+        <dl id="dados-evento"></dl>
+      </div>
+    </section>
+
+    <section id="historia" class="secao" hidden>
+      <div class="miolo prosa">
+        <h2 data-t="historia">Nossa história</h2>
+        <div id="texto-historia"></div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="secao">
+      <div class="miolo">
+        <div class="divisor" aria-hidden="true">
+          <svg viewBox="0 0 140 28"><g fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"><path d="M8 14h124"/><path d="M70 14c-8-10-22-10-24-2 8 1 16 1 24 2-8 1-16 1-24 2 2 8 16 8 24-2 8-10 22-10 24-2-8 1-16 1-24 2 8 1 16 1 24-2-2 8-16 8-24 2z"/></g></svg>
+        </div>
+        <h2 data-t="como.titulo">Como funciona</h2>
+        <div class="passos-como">
+          <article class="passo-card">
+            <p class="passo-num">1</p>
+            <h3 data-t="como.p1t">Escolha os presentes</h3>
+            <p data-t="como.p1">Navegue pela lista e coloque na sacola quantos presentes quiser.</p>
+          </article>
+          <article class="passo-card">
+            <p class="passo-num">2</p>
+            <h3 data-t="como.p2t">Pague com PIX</h3>
+            <p data-t="como.p2">Na finalização, geramos um QR Code e um código PIX copia e cola com o valor total.</p>
+          </article>
+          <article class="passo-card">
+            <p class="passo-num">3</p>
+            <h3 data-t="como.p3t">Confirme e deixe um recado</h3>
+            <p data-t="como.p3">Toque em “Já fiz o PIX”, escreva seu nome e mande uma mensagem para os noivos.</p>
+          </article>
+        </div>
+        <p class="nota-como" data-t="como.nota">Os presentes são simbólicos: o valor vai direto para os noivos, que vão usá-lo como preferirem. 💛</p>
+      </div>
+    </section>
+
+    <section id="presentes" class="secao">
+      <div class="miolo">
+        <h2 data-t="lista.titulo">Lista de presentes</h2>
+        <p id="subtitulo-lista" class="subtitulo"></p>
+        <h3 class="subtitulo" data-t="lista.favoritos">Os favoritos dos noivos</h3>
+        <div id="destaques" class="destaques"></div>
+        <div class="filtros" id="filtros">
+          <div class="busca">
+            <label class="sr-only" for="busca" data-t="lista.buscar">Buscar presente</label>
+            <input id="busca" type="search" data-ph="lista.buscarPh" autocomplete="off" placeholder="Buscar presente…">
+          </div>
+          <div id="chips-cat" class="chips" role="group"></div>
+          <div class="filtros-extra">
+            <div>
+              <span id="rotulo-preco" data-t="lista.faixa">Faixa de preço</span>
+              <div id="chips-preco" class="chips" role="group" aria-labelledby="rotulo-preco"></div>
+            </div>
+            <div class="ordenar">
+              <label for="ordenar" data-t="lista.ordenar">Ordenar por</label>
+              <select id="ordenar"></select>
+            </div>
+          </div>
+        </div>
+        <p id="contagem-resultados"></p>
+        <div id="grade" class="grade"></div>
+        <div id="vazio" class="vazio" hidden>
+          <p data-t="lista.vazio">Nenhum presente encontrado com esses filtros.</p>
+          <button type="button" class="btn btn-secundario" id="limpar-filtros" data-t="lista.limpar">Limpar filtros</button>
+          <p data-t="lista.ouSurpresa">Ou dê um presente surpresa com o valor que quiser.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recados" class="secao" hidden>
+      <div class="miolo">
+        <h2 data-t="mural.titulo">Recados para os noivos</h2>
+        <p class="subtitulo" data-t="mural.subtitulo">Mensagens de quem já presenteou 💌</p>
+        <div id="mural" class="mural"></div>
+        <p id="mural-vazio" class="subtitulo" hidden data-t="mural.vazio">Os primeiros recados vão aparecer aqui. Que tal deixar o primeiro?</p>
+        <button type="button" id="ver-mais" class="btn btn-secundario" hidden data-t="mural.mais">Ver mais recados</button>
+      </div>
+    </section>
+
+    <section id="duvidas" class="secao">
+      <div class="miolo">
+        <h2 data-t="faq.titulo">Dúvidas frequentes</h2>
+        <div id="lista-faq" class="faq"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="rodape-casal"></p>
+    <p id="rodape-credito" hidden></p>
+  </footer>
+
+  <button type="button" id="barra-sacola" class="barra" hidden></button>
+
+  <div id="overlay-sacola" class="overlay" hidden></div>
+  <aside id="sacola" class="gaveta" role="dialog" aria-modal="true" aria-labelledby="sacola-titulo" aria-hidden="true" inert>
+    <div class="alca" aria-hidden="true"></div>
+    <div class="gaveta-topo">
+      <h2 id="sacola-titulo" data-t="sacola.titulo">Sua sacola de presentes</h2>
+      <button type="button" class="icon-btn" id="fechar-sacola" aria-label="Fechar sacola"><span aria-hidden="true">×</span></button>
+    </div>
+    <div id="sacola-corpo" class="gaveta-corpo"></div>
+    <div id="sacola-rodape" class="gaveta-rodape"></div>
+  </aside>
+
+  <dialog id="checkout" aria-labelledby="checkout-titulo">
+    <form id="form-checkout" novalidate>
+      <div class="dialogo-barra">
+        <p class="passos" id="passos"></p>
+        <button type="button" class="icon-btn" id="fechar-checkout" aria-label="Fechar"><span aria-hidden="true">×</span></button>
+      </div>
+      <h2 id="checkout-titulo" data-t="checkout.quase">Quase lá!</h2>
+
+      <div id="passo-1">
+        <p data-t="checkout.resumo">Você está presenteando:</p>
+        <ul id="resumo-itens"></ul>
+        <p class="resumo-total"><span data-t="sacola.total">Total</span> <strong id="resumo-total"></strong></p>
+        <label for="nome-convidado" data-t="checkout.nome">Seu nome</label>
+        <input id="nome-convidado" name="nome" maxlength="80" autocomplete="name" aria-describedby="ajuda-nome erro-nome">
+        <p id="ajuda-nome" class="ajuda" data-t="checkout.ajudaNome">Pode ser o nome da família, ex.: Família Souza</p>
+        <p id="erro-nome" class="erro" hidden></p>
+        <label for="recado" data-t="checkout.recado">Recado para os noivos (opcional)</label>
+        <textarea id="recado" name="recado" maxlength="500" data-ph="checkout.recadoPh" placeholder="Escreva uma mensagem carinhosa…" aria-describedby="contador-recado"></textarea>
+        <p id="contador-recado" class="ajuda">0/500</p>
+        <label class="caixa" id="bloco-mural">
+          <input type="checkbox" id="mostrar-mural" checked>
+          <span data-t="checkout.mural">Pode mostrar meu recado no mural do site</span>
+        </label>
+        <div class="hp" aria-hidden="true">
+          <label for="website">Site</label>
+          <input id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="acoes-checkout">
+          <button type="submit" class="btn btn-primario" id="btn-gerar" data-t="checkout.gerar">Gerar PIX</button>
+        </div>
+      </div>
+
+      <div id="passo-2" hidden>
+        <p class="valor-grande" id="pix-valor"></p>
+        <p id="pix-para"></p>
+        <div id="pix-corpo"></div>
+        <p class="seguranca" id="pix-seguranca"></p>
+        <div class="acoes-checkout">
+          <button type="button" class="btn btn-primario" id="btn-paguei" data-t="checkout.jaFiz">Já fiz o PIX ✓</button>
+          <button type="button" class="btn btn-secundario" id="btn-voltar" data-t="checkout.voltar">Voltar</button>
+        </div>
+      </div>
+
+      <div id="passo-3" hidden>
+        <p id="obrigado-texto"></p>
+        <p id="obrigado-mural" class="nota-ok" hidden></p>
+        <p id="obrigado-falha" hidden></p>
+        <div class="acoes-checkout">
+          <button type="button" class="btn btn-primario" id="btn-outro" data-t="checkout.outro">Dar outro presente</button>
+          <button type="button" class="btn btn-secundario" id="btn-inicio" data-t="checkout.voltarSite">Voltar ao site</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="anuncios" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="toasts" class="toasts" aria-live="polite" aria-relevant="additions"></div>
+  <noscript><p class="aviso-dev">Esta lista precisa de JavaScript para funcionar.</p></noscript>
+
+  <script src="assets/vendor/qrcode.js" defer></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
